@@ -33,8 +33,7 @@ public class Book {
 	@Column
 	private int publicingYear;
 	
-	@Column
-	private String Autor;
+	
 	
 	@Column
 	private String publicher;
