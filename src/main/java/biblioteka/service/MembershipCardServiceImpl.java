@@ -3,8 +3,11 @@ package biblioteka.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import biblioteka.model.MembershipCard;
 
+@Service
 public class MembershipCardServiceImpl implements MembershipCardService {
 	@Override
 	public List<MembershipCard> getAll() {

@@ -9,6 +9,7 @@ import biblioteka.model.Hall;
 public interface HallService {
 	
 	List<Hall> getAll();
+	List<Hall >getByname(String name);
 	
 	Optional<Hall> getById(long id);
 	
@@ -18,4 +19,7 @@ public interface HallService {
 	
 	void delete(long id);
 	
+	
+	
+	Hall getByIdHall(long id );
 }

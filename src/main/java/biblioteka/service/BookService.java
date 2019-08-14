@@ -8,7 +8,7 @@ import biblioteka.model.Book;
 public interface BookService {
 	List<Book> getAll();
 
-	Optional<Book> getBybookId(long bookId);
+	Optional<Book> getByBookId(long bookId);
 
 	List<Book> getByauthor(String author);
 
@@ -27,7 +27,7 @@ public interface BookService {
 	List<Book> getBynumberOfPages(int numberOfPAges);
 
 	Book save(Book book);
-
+		
 	Book update(Book book, long bookId);
 
 	void delete(long bookId);

@@ -3,8 +3,11 @@ package biblioteka.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.stereotype.Service;
+
 import biblioteka.model.SystemRole;
 
+@Service
 public class SystemRoleServiceImpl implements SystemRoleService{
 	@Override
 	public List<SystemRole> getAll() {

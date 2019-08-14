@@ -4,10 +4,12 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import biblioteka.model.Author;
 import biblioteka.repository.AuthorRepository;
 
+@Service
 public class AuthorServiceImpl implements AuthorService{
 	@Autowired
 	AuthorRepository authorRepository;
