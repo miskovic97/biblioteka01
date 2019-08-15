@@ -31,18 +31,6 @@ public class HallServiceImpl implements HallService {
 	}
 
 	@Override
-	public Hall update(Hall hall, long id) {
-		return null;
-	}
-
-	@Override
-	public void delete(long id) {
-		hallRepository.deleteById(id);
-	}
-
-	
-
-	@Override
 	public Hall getByIdHall(long id) {
 		// TODO Auto-generated method stub
 		return null;
@@ -51,17 +39,18 @@ public class HallServiceImpl implements HallService {
 	@Override
 	public List<Hall> getByname(String name) {
 		return hallRepository.findByName(name);
-		
+
 	}
 
-	
-		
+	@Override
+	public Hall update(Hall hall, long id) {
+		return hallRepository.saveAndFlush(hall);
 	}
 
-	
+	@Override
+	public void delete(long id) {
+		// TODO Auto-generated method stub
 
-	
+	}
 
-	
-
-
+}

@@ -3,16 +3,19 @@ package biblioteka.service;
 import java.util.List;
 import java.util.Optional;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import biblioteka.model.Library;
+import biblioteka.repository.LibraryRepository;
 
 @Service
 public class LibraryServiceImpl implements LibraryService {
+	@Autowired
+	LibraryRepository libraryrepository;
 	@Override
 	public List<Library> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return libraryrepository.findAll();
 	}
 
 	@Override

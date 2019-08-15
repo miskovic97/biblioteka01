@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import biblioteka.model.Book;
-import biblioteka.model.Hall;
 import biblioteka.service.BookService;
 
 @RestController

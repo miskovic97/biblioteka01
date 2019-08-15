@@ -22,6 +22,9 @@ public class Author {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
+	
+	@Column(unique = true)
+	private long jmbg;
 
 	@Column
 	private String firstName;

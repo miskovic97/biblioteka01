@@ -16,8 +16,7 @@ public class AuthorServiceImpl implements AuthorService{
 	
 	@Override
 	public List<Author> getAll() {
-		// TODO Auto-generated method stub
-		return null;
+		return authorRepository.findAll();
 	}
 	
 	@Override
@@ -28,8 +27,7 @@ public class AuthorServiceImpl implements AuthorService{
 
 	@Override
 	public Optional<Author> getById(long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return authorRepository.findById(id);
 	}
 
 	@Override
@@ -52,20 +50,29 @@ public class AuthorServiceImpl implements AuthorService{
 
 	@Override
 	public Author save(Author author) {
-		// TODO Auto-generated method stub
-		return null;
+		return authorRepository.save(author);
 	}
 
 	@Override
 	public Author update(Author author, long id) {
-		// TODO Auto-generated method stub
-		return null;
+		return authorRepository.saveAndFlush(author);
+		
 	}
 
 	@Override
 	public void delete(long id) {
-		// TODO Auto-generated method stub
+		authorRepository.deleteById(id);
 		
+	}
+
+	@Override
+	public List<Author> getByJmbg(long jmbg) {
+		return authorRepository.findByJmbg(jmbg);
+	}
+
+	@Override
+	public Optional<Author> geByfirstAndlastName(String firstName, String lastName) {
+		return authorRepository.findByFirstNameAndLastName(firstName, lastName);
 	}
 	
 

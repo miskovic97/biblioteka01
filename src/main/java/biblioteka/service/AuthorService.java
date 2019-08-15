@@ -17,11 +17,12 @@ public interface AuthorService {
 	List<Author> getbypseudonym(String pseudonym);
 
 	List<Author> getbybirthYear(int birthYear);
-
+	List<Author > getByJmbg(long jmbg);
 	Author save(Author author);
 
 	Author update(Author author, long id);
 
 	void delete(long id);
+	Optional<Author> geByfirstAndlastName(String firstName,String lastName);
 
 }
