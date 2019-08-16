@@ -15,4 +15,5 @@ public interface MemberService {
 	Member update(Member member, long cardId);
 
 	void delete(long cardId);
+	
 }
