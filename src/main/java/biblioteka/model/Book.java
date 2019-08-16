@@ -35,6 +35,12 @@ public class Book {
 	private int publicingYear;
 	
 	
+	@Column
+	private int wholesaleValue;
+	
+	@Column
+	private int vat=20;
+	
 	
 	@Column
 	private String publicher;
