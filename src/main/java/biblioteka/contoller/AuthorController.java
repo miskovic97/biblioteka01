@@ -54,13 +54,16 @@ public class AuthorController {
 	}
 	@RequestMapping(method = RequestMethod.POST)
 	public ResponseEntity<AuthorDTO> createAuthor(@RequestBody AuthorDTO authordto) {
+		AuthorConverter converter = new AuthorConverter();
+		Author author= converter.convertToAuthor(authordto);
+		
 		List<Author> authors = authorservice.getByJmbg(author.getJmbg());
 		if(authors.isEmpty()) {
 			authorservice.save(author);
-			return new ResponseEntity<Author>(HttpStatus.CREATED);
+			return new ResponseEntity<AuthorDTO>(HttpStatus.CREATED);
 			
 		}
-		return new ResponseEntity<Author>(HttpStatus.CONFLICT);
+		return new ResponseEntity<AuthorDTO>(HttpStatus.CONFLICT);
 			
 	}
 	@RequestMapping(value="/{id}", method = RequestMethod.PUT)
